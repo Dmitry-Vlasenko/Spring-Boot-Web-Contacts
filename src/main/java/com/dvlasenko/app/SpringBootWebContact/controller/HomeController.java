@@ -6,9 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
-
 @Controller
 public class HomeController {
 
@@ -16,8 +13,8 @@ public class HomeController {
     ContactService contactService;
 
     @GetMapping("/")
-    public String getHome(Model model) throws URISyntaxException, IOException {
-        model.addAttribute("contacts", contactService.getTours());
+    public String getHome(Model model) {
+        model.addAttribute("contacts", contactService.getContact());
         return "home";
     }
 }
