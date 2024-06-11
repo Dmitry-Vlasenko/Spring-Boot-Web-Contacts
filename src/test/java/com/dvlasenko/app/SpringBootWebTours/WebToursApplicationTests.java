@@ -1,4 +1,4 @@
-package com.example.app.SpringBootWebTours;
+package com.dvlasenko.app.SpringBootWebTours;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

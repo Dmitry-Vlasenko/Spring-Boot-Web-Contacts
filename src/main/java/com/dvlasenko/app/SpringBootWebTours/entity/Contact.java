@@ -1,4 +1,4 @@
-package com.example.app.SpringBootWebTours.entity;
+package com.dvlasenko.app.SpringBootWebTours.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,8 +7,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "places")
-public class Place {
+@Table(name = "contacts")
+public class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

@@ -1,8 +1,8 @@
-package com.example.app.SpringBootWebTours.service;
+package com.dvlasenko.app.SpringBootWebTours.service;
 
-import com.example.app.SpringBootWebTours.entity.Place;
-import com.example.app.SpringBootWebTours.repository.PlaceRepository;
-import com.example.app.SpringBootWebTours.utils.Constants;
+import com.dvlasenko.app.SpringBootWebTours.entity.Contact;
+import com.dvlasenko.app.SpringBootWebTours.repository.ContactRepository;
+import com.dvlasenko.app.SpringBootWebTours.utils.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,16 +11,16 @@ import java.util.List;
 import java.util.stream.StreamSupport;
 
 @Service
-public class PlaceService {
+public class ContactService {
 
     @Autowired
-    PlaceRepository repository;
+    ContactRepository repository;
 
-    public List<Place> getTours() {
-        Iterable<Place> iterable = repository.findAll();
-        List<Place> list =
+    public List<Contact> getTours() {
+        Iterable<Contact> iterable = repository.findAll();
+        List<Contact> list =
                 StreamSupport.stream(iterable.spliterator(), false)
-                        .map(place -> new Place(place.getId(),
+                        .map(place -> new Contact(place.getId(),
                                 Constants.URL_IMAGES + place.getImg(),
                                 place.getName(),
                                 place.getDescr()))
