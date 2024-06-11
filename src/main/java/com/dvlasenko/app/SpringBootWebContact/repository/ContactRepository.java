@@ -1,6 +1,6 @@
-package com.dvlasenko.app.SpringBootWebTours.repository;
+package com.dvlasenko.app.SpringBootWebContact.repository;
 
-import com.dvlasenko.app.SpringBootWebTours.entity.Contact;
+import com.dvlasenko.app.SpringBootWebContact.entity.Contact;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

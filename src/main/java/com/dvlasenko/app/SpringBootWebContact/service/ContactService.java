@@ -1,8 +1,8 @@
-package com.dvlasenko.app.SpringBootWebTours.service;
+package com.dvlasenko.app.SpringBootWebContact.service;
 
-import com.dvlasenko.app.SpringBootWebTours.entity.Contact;
-import com.dvlasenko.app.SpringBootWebTours.repository.ContactRepository;
-import com.dvlasenko.app.SpringBootWebTours.utils.Constants;
+import com.dvlasenko.app.SpringBootWebContact.entity.Contact;
+import com.dvlasenko.app.SpringBootWebContact.repository.ContactRepository;
+import com.dvlasenko.app.SpringBootWebContact.utils.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ public class ContactService {
                         .map(place -> new Contact(place.getId(),
                                 Constants.URL_IMAGES + place.getImg(),
                                 place.getName(),
-                                place.getDescr()))
+                                place.getAddress()))
                         .toList();
         return new ArrayList<>(list);
     }

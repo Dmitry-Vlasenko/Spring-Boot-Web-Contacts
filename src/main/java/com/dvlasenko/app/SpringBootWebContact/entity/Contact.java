@@ -1,7 +1,9 @@
-package com.dvlasenko.app.SpringBootWebTours.entity;
+package com.dvlasenko.app.SpringBootWebContact.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
@@ -17,6 +19,6 @@ public class Contact {
     private String img;
     @Column(name = "name")
     private String name;
-    @Column(name = "description")
-    private String descr;
+    @Column(name = "address")
+    private String address;
 }
