@@ -20,10 +20,11 @@ public class ContactService {
         Iterable<Contact> iterable = repository.findAll();
         List<Contact> list =
                 StreamSupport.stream(iterable.spliterator(), false)
-                        .map(place -> new Contact(place.getId(),
-                                Constants.URL_IMAGES + place.getImg(),
-                                place.getName(),
-                                place.getAddress()))
+                        .map(contact -> new Contact(contact.getId(),
+                                Constants.URL_IMAGES + contact.getImg(),
+                                contact.getName(),
+                                contact.getAddress(),
+                                contact.getPhoneNumber()))
                         .toList();
         return new ArrayList<>(list);
     }
